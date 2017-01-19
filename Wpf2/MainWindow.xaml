@@ -1,0 +1,28 @@
+﻿<Window x:Class="Wpf2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Label x:Name="label_count" Content="Person Count:" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="count" Content="-" HorizontalAlignment="Left" Margin="134,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.055,0.611"/>
+        <Label x:Name="label_index" Content="Index:" HorizontalAlignment="Left" Margin="272,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="index" Content="-" HorizontalAlignment="Left" Margin="313,30,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_firstname" Content="Firstname:" HorizontalAlignment="Left" Margin="50,75,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_lastname" Content="Lastname:" HorizontalAlignment="Left" Margin="50,106,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_age" Content="Age:" HorizontalAlignment="Left" Margin="50,137,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label_telnr" Content="Telephone Nr:" HorizontalAlignment="Left" Margin="50,168,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox_telnr" Text="Tel" HorizontalAlignment="Left" Height="23" Margin="150,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_age" Text="Age" HorizontalAlignment="Left" Height="23" Margin="150,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_lastname" Text="Last" HorizontalAlignment="Left" Height="23" Margin="150,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_firstname" Text="First" HorizontalAlignment="Left" Height="23" Margin="150,79,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button_new" Content="New" Click="button_new_Click" HorizontalAlignment="Left" Margin="313,78,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_delete" Content="Delete" Click="button_delete_Click" HorizontalAlignment="Left" Margin="313,109,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_up" Content="Up" Click="button_up_Click" HorizontalAlignment="Left" Margin="313,143,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button_down" Content="Down" Click="button_down_Click" HorizontalAlignment="Left" Margin="313,174,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>
