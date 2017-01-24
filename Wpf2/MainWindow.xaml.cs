@@ -29,7 +29,7 @@ namespace Wpf2
 			UpdateInfo();
 		}
 
-		private void UpdateInfo() {
+		internal void UpdateInfo() {
 			count.Content = controller.PersonCount;
 			index.Content = controller.PersonIndex;
 
@@ -40,16 +40,21 @@ namespace Wpf2
 		}
 
 		private void button_new_Click(object sender, RoutedEventArgs e) {
-			int age;
-			int.TryParse(textBox_age.Text, out age);
+			//int age;
+			//int.TryParse(textBox_age.Text, out age); // Should be done in the controller...
 
-			controller.CurentPerson.FirstName = textBox_firstname.Text;
-			controller.CurentPerson.LastName = textBox_lastname.Text;
-			controller.CurentPerson.Age = age;
-			controller.CurentPerson.TelephoneNr = textBox_telnr.Text;
+			//controller.CurentPerson.FirstName = textBox_firstname.Text;
+			//controller.CurentPerson.LastName = textBox_lastname.Text;
+			//controller.CurentPerson.Age = age;
+			//controller.CurentPerson.TelephoneNr = textBox_telnr.Text;
 
-			controller.AddPerson();
-			UpdateInfo();
+			//controller.AddPerson();
+			//UpdateInfo();
+
+			// Pop up the new window here...
+			AddPerson APwindow = new AddPerson();
+			APwindow.Show();
+			APwindow.GiveThis(this);
 		}
 
 		private void button_delete_Click(object sender, RoutedEventArgs e) {

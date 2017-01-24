@@ -18,17 +18,32 @@ namespace Wpf2 {
 	/// </summary>
 	public partial class AddPerson : Window {
 		Controller controller;
+		MainWindow MainWindow;
 		public AddPerson() {
 			controller = Controller.GetInstance();
 			InitializeComponent();
 		}
 
-		private void button_save_Click(object sender, RoutedEventArgs e) {
+		public void GiveThis(MainWindow mw) {
+			MainWindow = mw;
+		}
 
+		private void button_save_Click(object sender, RoutedEventArgs e) {
+			int age;
+			int.TryParse(textBox_age.Text, out age); // Should be done in the controller...
+
+			controller.CurentPerson.FirstName = textBox_firstname.Text;
+			controller.CurentPerson.LastName = textBox_lastname.Text;
+			controller.CurentPerson.Age = age;
+			controller.CurentPerson.TelephoneNr = textBox_telnr.Text;
+
+			controller.AddPerson();
+			MainWindow.UpdateInfo();
+			this.Close();
 		}
 
 		private void button_cancel_Click(object sender, RoutedEventArgs e) {
-
+			this.Close();
 		}
 	}
 }
