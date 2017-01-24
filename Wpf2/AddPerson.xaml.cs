@@ -38,7 +38,7 @@ namespace Wpf2 {
 			controller.CurentPerson.TelephoneNr = textBox_telnr.Text;
 
 			controller.AddPerson();
-			MainWindow.UpdateInfo();
+			MainWindow.UpdateInfo(); // should implement some observer pattern in main windows instred, but sleepy...
 			this.Close();
 		}
 
