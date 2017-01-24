@@ -45,7 +45,8 @@ namespace Wpf2
 
         public void DeletePerson()
         {
-            if (CurentPerson != null)
+            //if (CurentPerson != null)
+			if(PersonCount > 0)
             {
                 repository.RemovePerson(CurentPerson);
                 PersonIndex--;

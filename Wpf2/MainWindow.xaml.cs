@@ -37,7 +37,6 @@ namespace Wpf2
 			textBox_lastname.Text = controler.CurentPerson.LastName;
 			textBox_age.Text = controler.CurentPerson.Age + "";
 			textBox_telnr.Text = controler.CurentPerson.TelephoneNr;
-
 		}
 
 		private void button_new_Click(object sender, RoutedEventArgs e) {
