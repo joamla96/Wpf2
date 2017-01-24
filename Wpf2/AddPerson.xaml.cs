@@ -17,7 +17,9 @@ namespace Wpf2 {
 	/// Interaction logic for AddPerson.xaml
 	/// </summary>
 	public partial class AddPerson : Window {
+		Controller controller;
 		public AddPerson() {
+			controller = Controller.GetInstance();
 			InitializeComponent();
 		}
 
