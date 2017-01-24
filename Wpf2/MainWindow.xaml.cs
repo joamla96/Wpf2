@@ -58,7 +58,9 @@ namespace Wpf2
 		}
 
 		private void button_delete_Click(object sender, RoutedEventArgs e) {
-			controller.DeletePerson();
+			MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+			if (messageBoxResult == MessageBoxResult.Yes)
+				controller.DeletePerson();
 			UpdateInfo();
 		}
 
