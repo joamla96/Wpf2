@@ -20,5 +20,13 @@ namespace Wpf2 {
 		public AddPerson() {
 			InitializeComponent();
 		}
+
+		private void button_save_Click(object sender, RoutedEventArgs e) {
+
+		}
+
+		private void button_cancel_Click(object sender, RoutedEventArgs e) {
+
+		}
 	}
 }
