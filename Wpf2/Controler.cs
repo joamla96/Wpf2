@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace Wpf2
 {
-    class Controller
+    class Controler
     {
-        private static Controller instance;
+        private static Controler instance;
         private Repository repository;
         public Person CurentPerson { get; private set; }
         public int PersonCount { get; private set; }
         public int PersonIndex { get; private set; }
 
-        private Controller()
+        private Controler()
         {
 			CurentPerson = new Person();
             repository = new Repository();
             PersonCount = 0;
             PersonIndex = -1;
         }
-        public static Controller GetInstance()
+        public static Controler GetInstance()
         {
             if (instance== null)
             {
-                instance = new Controller();
+                instance = new Controler();
             }
             return instance;
         }
