@@ -20,10 +20,10 @@ namespace Wpf2
     /// </summary>
     public partial class MainWindow : Window
     {
-        Controler controler;
+        Controller controler;
         public MainWindow()
         {
-            controler = Controler.GetInstance();
+            controler = Controller.GetInstance();
             InitializeComponent();
 
 			UpdateInfo();
